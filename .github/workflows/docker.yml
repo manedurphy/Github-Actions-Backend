@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  test-api:
+  test-build-and-deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,12 +21,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm i
     - run: npm test
-      
-
-
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
+    
     - name: Checkout
       uses: actions/checkout@v2
 
