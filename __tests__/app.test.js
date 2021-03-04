@@ -15,3 +15,10 @@ test('/api/added should receive a message "Added route has been deployed by GitH
     expect(res.body).toHaveProperty('message');
     expect(res.body.message).toBe('Added route has been deployed by GitHub actions!');
 });
+
+test('/api/fail should receive a message "You have failed"', async () => {
+    const res = await request(app).get('/api/fail');
+
+    expect(res.body).toHaveProperty('message');
+    expect(res.body.message).toBe('You have failed :(');
+});
