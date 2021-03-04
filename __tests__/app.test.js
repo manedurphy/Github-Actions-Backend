@@ -28,5 +28,5 @@ test('/api/another should receive a message "Yet another route that won\'t be de
     const res = await request(app).get('/api/another');
 
     expect(res.body).toHaveProperty('message');
-    expect(res.body.message).toBe('Yet another route that won\'t be deployed due to failing tes');
+    expect(res.body.message).toBe('Yet another route that won\'t be deployed due to failing test');
 });
