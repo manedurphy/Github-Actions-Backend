@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon serverStart.js",
+    "start": "nodemon src/serverStart.js",
     "restart": "pm2 restart backend",
+    "docker": "docker build -t manedurphy/node-web-app . && docker run -p 5000:5000 -d manedurphy/node-web-app",
     "test": "jest"
   },
   "keywords": [],
