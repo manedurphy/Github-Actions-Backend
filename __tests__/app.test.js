@@ -23,3 +23,10 @@ test('/api/fail should receive a message "You have failed"', async () => {
     expect(res.body.message).toBe('You have failed :(');
     expect(res.status).toBe(200);
 });
+
+test('/api/another should receive a message "Yet another route that won\'t be deployed due to failing test"', async () => {
+    const res = await request(app).get('/api/another');
+
+    expect(res.body).toHaveProperty('message');
+    expect(res.body.message).toBe('Yet another route that won\'t be deployed due to failing tes');
+});
