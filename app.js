@@ -14,4 +14,8 @@ app.get('/api/fail', (req, res) => {
     res.json({message: 'You have failed :('});
 });
 
+app.get('/api/another', (req, res) => { 
+    res.json({message: 'Yet another route that won\'t be deployed due to failing test'});
+});
+
 module.exports = app;
