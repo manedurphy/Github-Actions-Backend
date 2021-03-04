@@ -17,8 +17,8 @@ test('/api/added should receive a message "Added route has been deployed by GitH
 });
 
 test('/api/fail should receive a message "You have failed"', async () => {
-    const res = await request(app).get('/api/added');
+    const res = await request(app).get('/api/fail');
 
     expect(res.body).toHaveProperty('message');
-    expect(res.body.message).toBe('You have failed');
+    expect(res.body.message).toBe('You have failed :(');
 });
