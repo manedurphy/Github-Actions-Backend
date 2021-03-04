@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/serverStart.js",
+    "dev": "docker run --rm -d -p 5000:5000 manedurphy/node-web-app",
     "restart": "pm2 restart backend",
     "docker": "sudo docker build -t manedurphy/node-web-app . && sudo docker run -p 5000:5000 -d manedurphy/node-web-app",
     "test": "jest"
