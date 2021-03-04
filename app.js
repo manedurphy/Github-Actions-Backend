@@ -7,7 +7,7 @@ app.get('/api/test', (req, res) => {
 });
 
 app.get('/api/added', (req, res) => {
-    res.json({ mesage: 'Added route has been deployed by GitHub actions!' });
+    res.json({ message: 'Added route has been deployed by GitHub actions!' });
 })
 
-app.listen(5000, () => console.log('Server started on port 5000'));
+module.exports = app;
