@@ -18,4 +18,8 @@ app.get('/api/another', (req, res) => {
     res.json({message: 'Yet another route that won\'t be deployed due to failing test'});
 });
 
+app.get('/api/docker', (req, res) => {
+    res.json({ message: 'Docker route!' });
+});
+
 module.exports = app;
