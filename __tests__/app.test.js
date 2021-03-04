@@ -21,5 +21,5 @@ test('/api/fail should receive a message "You have failed"', async () => {
 
     expect(res.body).toHaveProperty('message');
     expect(res.body.message).toBe('You have failed :(');
-    expect(res.status).toBe(201);
+    expect(res.status).toBe(200);
 });
